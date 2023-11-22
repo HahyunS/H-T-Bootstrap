@@ -1,25 +1,12 @@
 /* variables */
 $font-color: #9FA2B4;
 $text-blue: #3751FF;
-$border-color: #DFE0EB;
-
-/* mixins */
-@mixin border-box-sizing {
-  box-sizing: border-box;
-}
-
-@mixin center-max-width {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 body {
   margin: 0;
 }
 
 .container {
-  @include border-box;
   max-width: 100%;
   overflow: hidden;
 }
@@ -27,7 +14,9 @@ body {
 header,
 .mt-4,
 .tickets-and-tasks {
-  @include center-max-width;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-fluid,
@@ -44,7 +33,7 @@ header,
 .container1,
 .tasks,
 .unresolved-tickets {
-  @include border-box;
+  box-sizing: border-box;
 }
 
 
@@ -78,7 +67,7 @@ header,
   }
   
   .selected {
-    background-color: $font-color;
+    background-color:$font-color;
     opacity: 0.08;
     margin-left: -22px;
   }
@@ -96,12 +85,12 @@ header,
   
   .legend-text {
     font-size: 12px;
-    color: $font-color;
+    color: #9FA2B4;
   }
   
   .mbt {
     font-size: 16px;
-    color: $font-color;
+    color: #9FA2B4;
   }
   
   .mbt2 {
@@ -131,7 +120,7 @@ header,
     width: 1px;
     height: 32px;
     margin: 0 34px;
-    color: $border-color;
+    color: #DFE0EB;
   }
   
   .name {
@@ -145,7 +134,7 @@ header,
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 5px solid $border-color;
+    border: 5px solid #DFE0EB;
     padding: 5px;
   }
 
@@ -155,7 +144,7 @@ header,
   .card {
     margin: 30px;
     border-radius: 8px;
-    border: 1px solid $border-color;
+    border: 1px solid #dfe0eb;
   }
   
   .text-grey {
@@ -188,28 +177,27 @@ header,
   #overdue, #sixteen {
     color: $text-blue;
   }
-  /* Nesting */
+  
   .card3 {
     width: 1150px;
     height: 546px;
     flex-shrink: 0;
     margin: 30px;
     border-radius: 8px;
-    border: 1px solid $border-color;
+    border: 1px solid #dfe0eb;
     flex-direction: column;
     background-color: white;
-    
-      .text-grey1 {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        color: $font-color;
-      }
-    
-      #pointing-hand{
-        top: 84px; left: 178px;
+  }
+  
+  .text-grey1 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    color: $font-color;
+  }
 
-    }
+  #pointing-hand{
+    top: 84px; left: 178px;
   }
 
   /* Tickets Tasks */
@@ -234,7 +222,7 @@ header,
     margin-bottom:18px; 
     margin-top: 20px;
     text-align: right; 
-    color: $font-color; 
+    color:$font-color; 
     font-size: 14px; 
     font-weight: 600; 
     line-height: 20px; 
@@ -246,3 +234,7 @@ header,
     width: 20px;
     height: 20px;
   }
+  #exampleModal {
+    display: flex;
+  }
+  
